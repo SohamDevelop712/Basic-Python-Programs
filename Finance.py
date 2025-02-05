@@ -46,7 +46,8 @@ def load():
         fout.close()
     except:
         f = open("Save.dat","wb")
-        
+        f.close()
+        load()
     if Finance != {}:
         global INC,BAL,OEXP,TEXP,TRAN,YEAR,MONTH,MonStart,LIAB
         INC = Finance["INC"]
